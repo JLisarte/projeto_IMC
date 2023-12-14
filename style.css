@@ -23,6 +23,7 @@
 
 body {
   font-family: 'Roboto', sans-serif;
+  height: 93vh;
   background: linear-gradient(180deg, #040924 0%, #DCE2E9 100%);
 }
 
@@ -32,9 +33,10 @@ body, input, button {
 }
 
 .container {
-  height: 100vh;
+  height: 90vh;
   display: grid;
   place-content: center;
+  margin-top: 5rem;
 }
 
 .cardOne {
@@ -219,7 +221,7 @@ td {
 
 p {
   text-align: center;
-  margin-top: 15rem;
+  margin-top: 8rem;
   font-size: 1.4rem;
   line-height: 2.4rem;
   color: var(--tt-label);
