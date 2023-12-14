@@ -17,11 +17,13 @@
   --bg-button: #02799D;
   --gb--erro: #F03E3E;
   --tt-erro: #FFF;
+  --tt-table: #999797;
+  --tt-tableOne: #ccc9c9;
 }
 
 body {
   font-family: 'Roboto', sans-serif;
-  background: #040924;
+  background: linear-gradient(180deg, #040924 0%, #DCE2E9 100%);
 }
 
 body, input, button {
@@ -35,10 +37,19 @@ body, input, button {
   place-content: center;
 }
 
-.card {
+.cardOne {
   padding: 4.8rem 6.4rem 6.4rem;
   background: #FFF;
   max-width: 42.8rem;
+  margin-inline: auto;
+  box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.1);
+  border-radius: 0.6rem;
+}
+
+.cardTwo {
+  padding: 4.8rem 8rem 4.8rem 8rem;
+  background: #FFF;
+  max-width: 420rem;
   margin-inline: auto;
   box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.1);
   border-radius: 0.6rem;
@@ -121,6 +132,7 @@ form button:hover {
   place-content: center;
   opacity: 0;
   visibility: hidden;
+  
 }
 
 .modal {
@@ -162,4 +174,61 @@ form button:hover {
   opacity: 0;
   transform: translateY(-30px);
   transition: transform .5s;
+}
+
+.table {
+  font-size: 1.3rem;
+  line-height: 2rem;
+  color: var(--tt-input);
+  margin-top: 3.2rem;
+  padding: 1rem;
+}
+
+td {
+  padding-bottom: 0.8rem;
+  padding: 1rem;
+}
+
+/* Estilo para a primeira célula de cada linha */
+.table tr .firstTd:first-child {
+  font-size: 1.6rem;
+  background-color: var(--bg-button) !important;
+  color: var(--tt-button);
+}
+
+/* Estilos para linhas pares exceto as destacadas */
+.table tr:nth-child(even) td:not(.highlightOne):not(.highlightTwo):not(.highlightThree):not(.highlightFour):not(.highlightFive) {
+  background-color: var(--tt-table);
+}
+
+/* Estilos para linhas ímpares exceto as destacadas */
+.table tr:nth-child(odd) td:not(.highlightOne):not(.highlightTwo):not(.highlightThree):not(.highlightFour):not(.highlightFive) {
+  background-color: var(--tt-tableOne);
+}
+
+/* Estilos para linhas destacadas */
+.table tr.highlightOne td,
+.table tr.highlightTwo td,
+.table tr.highlightThree td,
+.table tr.highlightFour td,
+.table tr.highlightFive td {
+  color: var(--tt-button);
+  background-color: var(--gb--erro) !important;
+}
+
+
+p {
+  text-align: center;
+  margin-top: 15rem;
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+  color: var(--tt-label);
+}
+
+.socialIcons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.6rem;
+  margin-top: 2.4rem;
 }
