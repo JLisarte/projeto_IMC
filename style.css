@@ -234,3 +234,24 @@ p {
   gap: 1.6rem;
   margin-top: 2.4rem;
 }
+
+@media screen and (max-width: 768px) {
+  .container {
+    height: 90vh;
+  }
+  
+  .cardOne {
+    
+    max-width: 100%;
+  }
+  
+  .cardTwo {
+    padding: 4.8rem 0 4.8rem 0;
+    max-width: 100%;
+  }
+  
+  form {
+    width: 100%;
+  }
+  
+}
